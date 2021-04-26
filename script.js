@@ -1,32 +1,23 @@
-console.log("WORKING");
+var pressOp = false;
 
 var input1 = "";
-var input2 = ""
-var pressOp = false;
-var pressCalc = false
+var input2 = "";
 
-var op;
+var op = false;
+
 var total = 0;
 
 var display = document.getElementById("display");
 
-
-
 function press(input) {
-    pressCalc = false
     if(!pressOp) {
         input1 += input
         display.innerHTML = input1;
-        console.log("input11")
     } else if (pressOp){
-    input2 += input;
-    display.innerHTML = input2;
-    console.log("input22")
+        input2 += input;
+        display.innerHTML = input2;
     }
-
 }
-
-
 
 
 function setOP(operator) {
@@ -35,8 +26,6 @@ function setOP(operator) {
 }
 
 function calculate() {
-    console.log(input1)
-    console.log(input2)
     var input1Num =  parseFloat(input1);
     var input2Num = parseFloat(input2);
 
@@ -46,13 +35,27 @@ function calculate() {
         total = input1Num * input2Num;
     } else if (op == "-") {
         total = input1Num - input2Num;
-    } else {
+    } else if(op == "+"){
         total = input1Num + input2Num;
+    } else {
+        total = "0"
     }
-    
-    display.innerHTML = total;
-    total = parseFloat(total);
 
+    total = total.toString()
+
+    if(total.length > 9) {
+        display.innerHTML = total.substring(0,9) + "...";
+    } else {
+        display.innerHTML = total
+    }
     input1 = total;
     input2 = "";
+    
+}
+
+function clr() {
+    display.innerHTML = "0";
+    input1 = "";
+    input2 = "";
+    pressOp = false;
 }
