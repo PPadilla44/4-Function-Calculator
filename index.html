@@ -11,31 +11,31 @@
     <div id="calculator">
         <div id="display">0</div>
         <div class="row">
-            <button onclick="press(7);">7</button>
-            <button onclick="press(8);">8</button>
-            <button onclick="press(9);">9</button>
-            <button class="operator" onclick="setOP('/');">÷</button>
+            <h1 onclick="press(this,7);">7</h1>
+            <h1 onclick="press(this,8);">8</h1>
+            <h1 onclick="press(this,9);">9</h1>
+            <h1 class="operator" onclick="setOP(this,'/');">÷</h1>
         </div>
         <div class="row">
-            <button onclick="press(4);">4</button>
-            <button onclick="press(5);">5</button>
-            <button onclick="press(6);">6</button>
-            <button class="operator" onclick="setOP('*');">×</button>
+            <h1 onclick="press(this,4);">4</h1>
+            <h1 onclick="press(this,5);">5</h1>
+            <h1 onclick="press(this,6);">6</h1>
+            <h1 class="operator" onclick="setOP(this,'*');">×</h1>
         </div>
         <div class="row">
-            <button onclick="press(1);">1</button>
-            <button onclick="press(2);">2</button>
-            <button onclick="press(3);">3</button>
-            <button class="operator" onclick="setOP('-');">−</button>
+            <h1 onclick="press(this,1);">1</h1>
+            <h1 onclick="press(this,2);">2</h1>
+            <h1 onclick="press(this,3);">3</h1>
+            <h1 class="operator" onclick="setOP(this,'-');">−</h1>
         </div>
         <div class="row">
-            <button onclick="clr();">C</button>
-            <button onclick="press(0);">0</button>
-            <button onclick="press('.');">.</button>
-            <button class="operator" onclick="setOP('+');">+</button>
+            <h1 onclick="clr(this);">C</h1>
+            <h1 onclick="press(this,0);">0</h1>
+            <h1 onclick="press(this,'.');">.</h1>
+            <h1 class="operator" onclick="setOP(this,'+');">+</h1>
         </div>
         <div class="row">
-            <button id="equals" onclick="calculate()">=</div>
+            <h1 id="equals" onclick="calculate(this)">=</h1>
         </div>
     <div>
     <script src="script.js"></script>
